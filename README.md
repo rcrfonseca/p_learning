@@ -1,2 +1,1 @@
-# p_learning
-For General Learning Purposes. Scientific and practical.
+# For General Learning Purposes. Scientific and practical.
