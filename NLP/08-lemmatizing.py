@@ -1,31 +1,21 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# Related to stemming, but the final result of the operation 
+# is a real word, a synonym or closest to the input word.
+
 import nltk
-from nltk.corpus import state_union
-from nltk.tokenize import PunktSentenceTokenizer
+from nltk.stem import WordNetLemmatizer
 
-train_text = state_union.raw("2005-GWBush.txt")
-sample_text = state_union.raw("2006-GWBush.txt")
+lemmatizer = WordNetLemmatizer()
 
-custom_sentence_tokenizer = PunktSentenceTokenizer(train_text)
+print(lemmatizer.lemmatize("cats"))
+print(lemmatizer.lemmatize("cacti"))
+print(lemmatizer.lemmatize("geese"))
+print(lemmatizer.lemmatize("rocks"))
+print(lemmatizer.lemmatize("python"))
+print(lemmatizer.lemmatize("better", pos="a"))
 
-tokenized = custom_sentence_tokenizer.tokenize(sample_text)
-
-def process_content():
-	try:
-		for i in tokenized:
-			words = nltk.word_tokenize(i)
-			tagged = nltk.pos_tag(words)
-
-			nameEnt = nltk.ne_chunk(tagged)
-			nameEnt.draw()
-
-
-	except Exception as e:
-		print(str(e))
-
-process_content()
 
 # ps = PorterStemmer()
 
