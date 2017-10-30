@@ -1,1 +1,3 @@
-# For General Learning Purposes. Scientific and practical.
+# Learning Project
+
+## For General Learning Purposes. Scientific and practical.
