@@ -27,14 +27,14 @@ place = '3A1c88433143d383e1'
 # geo='-22.903426,-43.191478,70km'
 
 # #Desde. Formato YYYY-MM-DD.
-# since='2015-08-17'
+since='2017-10-30'
 
 # #Até o dia anterior de. Formato YYYY-MM-DD.
-# until='2015-08-23'
+until='2017-10-31'
 
 # #Lista de Termos, separe por vírgulas.
 
-query = ['']
+query = [place]
 
 for q in query:
 
@@ -47,10 +47,10 @@ for q in query:
 
                         if(max_id == '0'):
 
-                                URL = "https://api.twitter.com/1.1/search/tweets.json?q="+place
+                                URL = "https://api.twitter.com/1.1/search/tweets.json?q="+q+"&since="+since+"&until="+until+"&count=100"
                         else:
 
-                                URL = "https://api.twitter.com/1.1/search/tweets.json?q="+place
+                                URL = "https://api.twitter.com/1.1/search/tweets.json?q="+q+"&since="+since+"&until="+until+"&count=100"+"&max_id="+str(max_id)
                         max_id_ant = max_id
                         response, data = client.request(URL, "GET")
                         placeDCX = json.loads(data)
