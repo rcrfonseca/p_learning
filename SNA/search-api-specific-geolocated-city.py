@@ -34,27 +34,7 @@ place = '3A1c88433143d383e1'
 
 # #Lista de Termos, separe por vírgulas.
 
-# query = ['transito lento',
-#         'transito ruim',
-#         'transito intenso',
-#         'retencoes',
-#         'pontos de parada',
-#         'tiroteio',
-#         'congestionamento',
-#         'tudo parado',
-#         'engarrafamento',
-#         'engarrafado',
-#         'transito',
-#         'trafego',
-#         'colisao',
-#         'atropelamento'
-#         'congestionado',
-#         'capotamento',
-#         'batida carro',
-#         'acidente',
-#         'blitz',
-#         'bols',
-#         'batida onibus']
+query = ['']
 
 for q in query:
 
