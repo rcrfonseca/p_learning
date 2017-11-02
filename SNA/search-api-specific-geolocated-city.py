@@ -17,7 +17,7 @@ client = oauth.Client(consumer, access_token)
 clientMongo = pymongo.MongoClient("localhost", 27017)
 db = clientMongo.teste_fonseca
 
-place = '3A1c88433143d383e1'
+place_id = '3A1c88433143d383e1'
 
 #since_id = '' #pode usar since_id ou nao, se usar, colocar na url
 
@@ -34,7 +34,7 @@ until='2017-10-31'
 
 # #Lista de Termos, separe por vírgulas.
 
-query = [place]
+query = ['']
 
 for q in query:
 
@@ -47,10 +47,10 @@ for q in query:
 
                         if(max_id == '0'):
 
-                                URL = "https://api.twitter.com/1.1/search/tweets.json?q="+q+"&since="+since+"&until="+until+"&count=100"
+                                URL = "https://api.twitter.com/1.1/geo/reverse_geocode.json?lat=37.76893497&long=-122.42284884"
                         else:
 
-                                URL = "https://api.twitter.com/1.1/search/tweets.json?q="+q+"&since="+since+"&until="+until+"&count=100"+"&max_id="+str(max_id)
+                                URL = "https://api.twitter.com/1.1/geo/id/df51dec6f4ee2b2c.json"+"&max_id="+str(max_id)
                         max_id_ant = max_id
                         response, data = client.request(URL, "GET")
                         placeDCX = json.loads(data)

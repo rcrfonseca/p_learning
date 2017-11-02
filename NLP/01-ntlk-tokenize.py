@@ -12,3 +12,4 @@ print(word_tokenize(example_text))
 
 for i in word_tokenize(example_text):
 	print(i)
+
