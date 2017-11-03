@@ -12,3 +12,5 @@ place_id = places[0].id
 tweets = api.search(q="place:%s" % place_id)
 for tweet in tweets:
     print tweet.text + " | " + tweet.place.name + " | " + tweet.place.id if tweet.place else "Undefined place"
+
+#1c88433143d383e1 place id = DCX
