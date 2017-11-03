@@ -7,11 +7,8 @@ auth.set_access_token("2471507719-kvni00S7JySj8Iq3PUD80d01jrh8HpSodLnoABo","EjbR
 
 api = tweepy.API(auth)
 places = api.geo_search(query="BR", granularity="city")
-#place_id = places[0].id
-place_id = "1c88433143d383e1"
+place_id = places[0].id
 
 tweets = api.search(q="place:%s" % place_id)
 for tweet in tweets:
     print tweet.text + " | " + tweet.place.name + " | " + tweet.place.id if tweet.place else "Undefined place"
-
-#1c88433143d383e1 place id = Duque de caxias
