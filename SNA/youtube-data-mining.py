@@ -1,3 +1,19 @@
+#!/usr/bin/python
+
+import argparse
+import httplib
+import httplib2
+import os
+import random
+import time
+
+import google.oauth2.credentials
+import google_auth_oauthlib.flow
+from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
+from googleapiclient.http import MediaFileUpload
+from google_auth_oauthlib.flow import InstalledAppFlow
+
 from apiclient.discovery import build #pip install google-api-python-client
 from apiclient.errors import HttpError #pip install google-api-python-client
 from oauth2client.tools import argparser #pip install oauth2client
