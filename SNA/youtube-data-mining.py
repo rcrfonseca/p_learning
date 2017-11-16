@@ -1,19 +1,5 @@
 #!/usr/bin/python
 
-import argparse
-import httplib
-import httplib2
-import os
-import random
-import time
-
-import google.oauth2.credentials
-import google_auth_oauthlib.flow
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
-from googleapiclient.http import MediaFileUpload
-from google_auth_oauthlib.flow import InstalledAppFlow
-
 from apiclient.discovery import build #pip install google-api-python-client
 from apiclient.errors import HttpError #pip install google-api-python-client
 from oauth2client.tools import argparser #pip install oauth2client
@@ -56,8 +42,9 @@ for search_result in search_response.get("items", []):
 
  		res = []
 for i in videos_list_response['items']:
- temp_res = dict(v_id = i['id'], v_title = videos[i['id']])
- temp_res.update(i['statistics'])
- res.append(temp_res)
+	temp_res = dict(v_id = i['id'], v_title = videos[i['id']])
+	temp_res.update(i['statistics'])
+	res.append(temp_res)
+	result_python = pd.DataFrame.from_dict(res)
 
- pd.DataFrame.from_dict(res)
+print result_python
