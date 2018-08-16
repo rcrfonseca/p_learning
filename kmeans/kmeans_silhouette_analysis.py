@@ -1,7 +1,7 @@
 """
 ===============================================================================
 Selecting the number of clusters with silhouette analysis on KMeans clustering
-===============================================================================
+==============================================================================
 
 Silhouette analysis can be used to study the separation distance between the
 resulting clusters. The silhouette plot displays a measure of how close each
