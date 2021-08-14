@@ -2,4 +2,4 @@
 
 ## For General Learning Purposes. Scientific and practical.
 
-* Multiple technologies, libraries and extension tests.
+* Multiple technologies, libraries and extension tests. Test
